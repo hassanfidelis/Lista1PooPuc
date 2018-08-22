@@ -1,0 +1,37 @@
+/*Hassan Fidelis
+Programação Orientada a Objetos
+13 - Escreva uma função que gera a seguinte matriz:
+1 1 1 1 1 1
+1 2 2 2 2 1
+1 2 3 3 2 1
+1 2 3 3 2 1
+1 2 2 2 2 1
+1 1 1 1 1 1*/
+
+
+package trabalhodefunções;
+import java.util.Scanner;
+
+public class Exercício13 {
+    
+    public static void main(String[] args) {
+        int[][] matriz = new int[6][6];
+        int menor = 0;
+
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("Matriz 6 x 6\n");
+
+        for(int linha = 0; linha < 6; linha++){
+            for(int coluna = 0; coluna < 6; coluna++){
+                System.out.printf("Digite o elemento para a Matriz[%d][%d]: ", linha+1,coluna+1);
+                matriz[linha][coluna] = entrada.nextInt();
+            }
+        }
+        for(int linha = 0; linha < 6; linha++){
+            for(int coluna = 0; coluna < 6; coluna++){
+                System.out.printf("\t %d \t", matriz[linha][coluna]);
+            }
+            System.out.println();
+        }
+    }
+}
